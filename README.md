@@ -7,8 +7,10 @@ cached for 1 hour and only JSON is expected. Golang 1.9 is required.
 go run main.go
 ```
 
+or use [prebuilt](prebuilt) binaries.
+
 ## Use
 ```
-# after starting this ia a regular proxy for the 'http://api.openweathermap.org'
+# after starting this is a regular proxy for the 'http://api.openweathermap.org'
 http://localhost:8000/data/2.5/forecast?q=Zagreb,hr&cnt=5&appid=xxx
 ```
