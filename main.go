@@ -18,7 +18,7 @@ type Cache struct {
 // return cached data if exists, otherwise fetches from api and caches locally
 func (cache *Cache) proxy(w http.ResponseWriter, r *http.Request) {
 	key := r.RequestURI
-	log.Print(key)
+	log.Print("request: ", key)
 
 	// ignore invalid or favicon requests if from browser
 	if len(key) < 40 || strings.Index(key, "/favicon") == 0 {
