@@ -20,8 +20,8 @@ func (cache *Cache) proxy(w http.ResponseWriter, r *http.Request) {
 	key := r.RequestURI
 	log.Print(key)
 
-	// ignore favicon requests if from browser
-	if strings.Index(key, "/favicon") == 0 {
+	// ignore invalid or favicon requests if from browser
+	if len(key) < 40 || strings.Index(key, "/favicon") == 0 {
 		return
 	}
 
