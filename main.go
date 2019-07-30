@@ -31,7 +31,7 @@ func (cache *Cache) proxy(w http.ResponseWriter, r *http.Request) {
 	if ok {
 		w.Write(cached.([]byte))
 	} else {
-		log.Print("upading weather data from api")
+		log.Print("updating weather data from api")
 		resp, e := http.Get("http://api.openweathermap.org" + key)
 
 		defer resp.Body.Close()
